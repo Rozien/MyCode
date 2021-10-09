@@ -4,15 +4,15 @@ import java.util.Scanner;
 
 class demo03 {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
+        Scanner scanner=new Scanner(System.in);
         System.out.println("请输入学生人数");
-        int num=sc.nextInt();                //输入学生人数
+        int num=scanner.nextInt();                //输入学生人数
         int[] score=new int[num];            //创建数组，存放学生成绩
 
         int sum=0;
         for(int i=0;i<score.length;i++){
             System.out.println("请输入第"+(i+1)+"个学生的成绩");
-            score[i]=sc.nextInt();           //录入成绩
+            score[i]=scanner.nextInt();           //录入成绩
             sum += score[i];                 //累加到sum，计算总分
         }
         System.out.println("总分为："+sum);   //输出总分
@@ -31,6 +31,7 @@ class demo03 {
         }
         System.out.println("最高分为："+max);
         System.out.println("最低分为："+min);
+        scanner.close();
         }
     }
 
